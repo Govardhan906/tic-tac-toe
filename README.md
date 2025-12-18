@@ -9,7 +9,7 @@
 
 **A visually stunning, feature-rich Tic-Tac-Toe game with AI opponents and modern design.**
 
-[Play Now](#quick-start) • [Features](#features) • [Tech Stack](#tech-stack) • [Architecture](#architecture)
+[🎮 Live Demo](https://govardhan906.github.io/tic-tac-toe/) • [Features](#features) • [Tech Stack](#tech-stack) • [Architecture](#architecture)
 
 </div>
 
