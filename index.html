@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A modern Tic-Tac-Toe game with stunning neon cyberpunk visuals, AI opponents, and score tracking"
+    />
+    <meta name="keywords" content="tic-tac-toe, game, neon, cyberpunk, AI" />
+    <meta name="author" content="Govardhan Reddy" />
+    <title>Tic-Tac-Toe</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Background Effects -->
+      <div class="bg-effects">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+        <div class="bg-grid"></div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="game-header">
+          <h1 class="game-title">
+            <span class="title-x">TIC</span>
+            <span class="title-separator">-</span>
+            <span class="title-tac">TAC</span>
+            <span class="title-separator">-</span>
+            <span class="title-o">TOE</span>
+          </h1>
+        </header>
+
+        <!-- Game Controls -->
+        <section class="game-controls">
+          <!-- Mode Selector -->
+          <div class="control-group">
+            <label class="control-label">Game Mode</label>
+            <div class="toggle-group" id="modeSelector">
+              <button class="toggle-btn active" data-mode="pvp">
+                <span class="toggle-icon">👥</span>
+                <span class="toggle-text">PvP</span>
+              </button>
+              <button class="toggle-btn" data-mode="ai">
+                <span class="toggle-icon">🤖</span>
+                <span class="toggle-text">vs AI</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Difficulty Selector (Hidden by default) -->
+          <div
+            class="control-group difficulty-group hidden"
+            id="difficultyGroup"
+          >
+            <label class="control-label">AI Difficulty</label>
+            <div class="toggle-group" id="difficultySelector">
+              <button class="toggle-btn" data-difficulty="easy">
+                <span class="toggle-text">Easy</span>
+              </button>
+              <button class="toggle-btn active" data-difficulty="medium">
+                <span class="toggle-text">Medium</span>
+              </button>
+              <button class="toggle-btn" data-difficulty="hard">
+                <span class="toggle-text">Hard</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Turn Indicator -->
+        <div class="turn-indicator" id="turnIndicator">
+          <span class="turn-text">Player</span>
+          <span class="turn-player player-x" id="currentPlayer">X</span>
+          <span class="turn-text">'s Turn</span>
+        </div>
+
+        <!-- Game Board -->
+        <section class="game-board-container">
+          <div class="game-board" id="gameBoard">
+            <button class="cell" data-index="0" aria-label="Cell 1"></button>
+            <button class="cell" data-index="1" aria-label="Cell 2"></button>
+            <button class="cell" data-index="2" aria-label="Cell 3"></button>
+            <button class="cell" data-index="3" aria-label="Cell 4"></button>
+            <button class="cell" data-index="4" aria-label="Cell 5"></button>
+            <button class="cell" data-index="5" aria-label="Cell 6"></button>
+            <button class="cell" data-index="6" aria-label="Cell 7"></button>
+            <button class="cell" data-index="7" aria-label="Cell 8"></button>
+            <button class="cell" data-index="8" aria-label="Cell 9"></button>
+          </div>
+        </section>
+
+        <!-- Scoreboard -->
+        <section class="scoreboard">
+          <div class="score-card score-x">
+            <span class="score-label">Player X</span>
+            <span class="score-value" id="scoreX">0</span>
+          </div>
+          <div class="score-card score-draw">
+            <span class="score-label">Draws</span>
+            <span class="score-value" id="scoreDraws">0</span>
+          </div>
+          <div class="score-card score-o">
+            <span class="score-label">Player O</span>
+            <span class="score-value" id="scoreO">0</span>
+          </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="action-buttons">
+          <button class="btn btn-secondary" id="resetBtn">
+            <span class="btn-icon">🔄</span>
+            <span class="btn-text">Reset Game</span>
+          </button>
+          <button class="btn btn-primary" id="newGameBtn">
+            <span class="btn-icon">✨</span>
+            <span class="btn-text">New Game</span>
+          </button>
+        </section>
+      </main>
+
+      <!-- Win/Draw Modal -->
+      <div class="modal-overlay hidden" id="gameModal">
+        <div class="modal">
+          <div class="modal-icon" id="modalIcon">🏆</div>
+          <h2 class="modal-title" id="modalTitle">Player X Wins!</h2>
+          <p class="modal-message" id="modalMessage">Congratulations!</p>
+          <div class="modal-buttons">
+            <button class="btn btn-primary" id="playAgainBtn">
+              <span class="btn-icon">🎮</span>
+              <span class="btn-text">Play Again</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/game.js"></script>
+    <script src="js/ai.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
