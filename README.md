@@ -86,7 +86,7 @@ tic-tac-toe/
 
 ```bash
 # Clone the repository
-git clone https://github.com/govardhan-reddy/tic-tac-toe.git
+git clone https://github.com/Govardhan906/tic-tac-toe.git
 
 # Open in browser
 open index.html
@@ -163,6 +163,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ by Govardhan Reddy**
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/govardhan-reddy)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Govardhan906)
 
 </div>
